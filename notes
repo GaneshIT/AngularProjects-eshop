@@ -1,0 +1,77 @@
+Angular 10 Version
+
+* Two way communication/binding
+* SPA(single page application)
+* Server side rendering support
+* Inbuild services to connect API
+* MVC Architecture support
+* Template driven approach
+* Component based approach
+* Easy to maintain and test
+
+What is NPM?
+node package manager. it used to create,install,
+develop,debug,test,publish projects(Angular,react,js 
+frameworks)
+
+Project steps:
+
+1.How to install angular package?
+Execute command:
+npm install -g @angular/cli
+
+2.How to create angular project?
+Execute command:
+ng new projectname
+
+Note: project name should be small letters.
+
+3.How to run angular project?
+Execute command:
+ng serve
+
+
+How to create our own component?
+execute command:
+->ng g c componentname
+
+Example: ng g c components/add-product
+
+Angular Routing:
+
+-> Routes- should be configured in routing.module.ts file
+        ->Path: urlPath, component:componentName;
+Example:->Path: 'rental',component:RentalComponent
+-> routerLink
+        ->navigationText
+Example:-><a routerLink='/rental'>Rental</a>
+
+Note:To implment routing into angular, we should import
+RoutingModule in app.module.ts file
+
+
+
+
+https://github.com/GaneshIT/e-ShopAPI
+
+
+How to consume API from Angular?
+
+step 1: Import HttpClientModule in app.module ts file
+step 2: create service file
+        command: ng g s servicename
+step 3: import servicename into component file to access
+step 4: inject servicename constructor of component name
+
+How to create model file in angular?
+
+command: ng g class models/modelname --type=model
+
+
+
+
+
+
+
+ 
+

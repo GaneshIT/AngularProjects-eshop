@@ -1,0 +1,41 @@
+<h2>Add Product</h2>
+<hr />
+<div class="container">
+    <div>
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" [(ngModel)]="name" class="form-control" name="name" />
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <input type="text" [(ngModel)]="description" class="form-control" name="description" />
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="text" [(ngModel)]="price" class="form-control" name="price" />
+            </div>
+            <input type="button" value="Save" (click)="addProduct()" class="btn btn-primary" />
+            <input type="button" value="Reset" class="btn btn-secondary" />
+        </form>
+    </div>
+    <hr />
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let product of productlist">
+            <tr>
+                <td>{{product?.name | uppercase}}</td>
+                <td>{{product?.description}}</td>
+                <td>{{product?.price}}</td>
+                <td><a routerLink="/edit/{{product.id}}">Edit</a></td>
+                <td><a routerLink="/delete/{{product.id}}">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
